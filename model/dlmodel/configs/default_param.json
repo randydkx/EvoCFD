@@ -1,0 +1,38 @@
+{
+    "EvoCFD": {
+        "model": {
+            "token_bias": true,
+            "n_layers": 3,
+            "d_token": 192,
+            "n_heads": 8,
+            "d_ffn_factor": 1.3333333333333333,
+            "attention_dropout": 0.2,
+            "ffn_dropout": 0.1,
+            "residual_dropout": 0.0,
+            "activation": "reglu",
+            "prenormalization": false,
+            "initialization": "kaiming",
+            "kv_compression": null,
+            "kv_compression_sharing": null,
+            "temporal_embeddings": {
+                "order": [1, 1, 1, 1],
+                "trend": true,
+                "d_embedding": 8
+            }
+        },
+        "training": {
+            "lr": 1e-4,
+            "weight_decay": 1e-05,
+            "model_weight_decay" : 5e-5,
+            "head_lr": 1e-3,
+            "bn_lr": 5e-5,
+            "svd_lr": 5e-4,
+            "tokenizer_lr": 3e-3,
+            "time_lr": 1e-3,
+            "eta_min": 1e-5,
+            "svd_thres": 100,
+            "num_eigen": 100
+        },
+        "general": {}
+    }
+}
